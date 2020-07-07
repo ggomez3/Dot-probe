@@ -1,0 +1,23 @@
+div.upstim {
+    text-align:center;
+    color: black;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 100%;
+
+}
+
+div.downstim {
+    text-align:center;
+    color: black;
+    position: absolute;
+    top: 60%;
+    left:0%;
+    width: 100%;
+}
+
+p.feedback{
+    text-align: center;
+    color: green;
+}
