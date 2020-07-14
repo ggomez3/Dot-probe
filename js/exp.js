@@ -1,10 +1,10 @@
 //Data
-const correct_anskey = {'left':37, 'right':39, 'up': 38, 'down':40}
+const correct_anskey = {'left':37, 'right':39}
 const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was wrong, try again!'}
 
 
 const block_para_lists = [{
-    instruction: "<p>Welcome to the task. The first 25 trials are just to get you used to the program and how it work. Focus on the cross that first appears at the center of the screen, and press the key that appears shortly after.</p>",
+    instruction: "<p>Welcome to the task. The first 25 trials are just to get you used to the program and how it work. Focus on the cross that first appears at the center of the screen. Then wait for the key to appear, and respond with the correct arrow key</p>",
     stim_csv: "wordlist_p1.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
@@ -42,7 +42,7 @@ function assignTrialCondandShuffle(stim_list) {
   var factors = {
     'threatup':[true,false],
     'probeup':[true,false],
-    'probedir':['left','right', 'up', 'down']
+    'probedir':['left','right']
   }
   
   full_design = jsPsych.randomization.factorial(factors,stim_list.length/8)
