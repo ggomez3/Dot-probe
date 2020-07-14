@@ -17,13 +17,6 @@ const block_para_lists = [{
     feedback:true,
     preprocess:assignTrialCondandShuffle
   },
-  {
-    instruction: "<p>blah blah blah</p>",
-    stim_csv: "wordlist_exp.csv",
-    debrief: "<p>blah blah blah</p>",
-    feedback:false,
-    preprocess:assignTrialCondandShuffle
-  }
 ];
 
 const fixation = {
