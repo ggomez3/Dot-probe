@@ -12,7 +12,7 @@ const block_para_lists = [{
   },
   {
     instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
-    stim_csv: "wordlist_p2.csv",
+    stim_csv: {'threat': 'word1','neutral':'word2', 'threat': 'word3', 'neutral': 'word4'}
     debrief: "<p>blah blah blah</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
