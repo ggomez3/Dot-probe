@@ -1,5 +1,5 @@
 //Data
-const correct_anskey = {'left':37, 'right':39}
+const correct_anskey = {'left':37, 'right':39, 'up': 38, 'down':40}
 const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was wrong, try again!'}
 
 
@@ -42,7 +42,7 @@ function assignTrialCondandShuffle(stim_list) {
   var factors = {
     'threatup':[true,false],
     'probeup':[true,false],
-    'probedir':['left','right']
+    'probedir':['left','right', 'up', 'down']
   }
   
   full_design = jsPsych.randomization.factorial(factors,stim_list.length/8)
