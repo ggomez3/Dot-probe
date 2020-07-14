@@ -27,9 +27,6 @@ const fixation = {
   post_trial_gap: 0
 }
 
-const instruction_text = '<p>Blah Blah Blah</p>'+
-    '<p>Blah Blah Blah Blah</p>';
-
 
 const debrief_text ="<p>blah blah blah DONE</p>";
 
