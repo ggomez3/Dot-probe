@@ -5,14 +5,14 @@ const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was w
 
 const block_para_lists = [{
     instruction: "<p>blah blah blah</p>",
-    stim_csv: "./csv/wordlist_p1.csv",
+    stim_csv: ./csv/"wordlist_p1.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
   },
   {
     instruction: "<p>blah blah blah</p>",
-    stim_csv: "./csv/wordlist_p2.csv",
+    stim_csv: ./csv/"wordlist_p2.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
