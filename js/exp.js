@@ -4,14 +4,14 @@ const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was w
 
 
 const block_para_lists = [{
-    instruction: "<p>blah blah blah</p>",
+    instruction: "<p>Welcome to the task. The first 25 trials are just to get you used to the program and how it work. Focus on the cross that first appears at the center of the screen, and press the key that appears shortly after.</p>",
     stim_csv: "wordlist_p1.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
   },
   {
-    instruction: "<p>blah blah blah</p>",
+    instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
     stim_csv: "wordlist_p2.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
@@ -23,7 +23,7 @@ const fixation = {
   type: 'html-keyboard-response',
   stimulus: '<p class="stimulus">+</p>',
   choices: jsPsych.NO_KEYS,
-  trial_duration: 1000,
+  trial_duration: 500,
   post_trial_gap: 0
 }
 
