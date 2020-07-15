@@ -170,12 +170,6 @@ for (const block_para of block_para_lists) {
 }
 
 
-
-Promise.all(promises).then(function(){
-  timeline.push(buildInstruction(instruction_text));
-  for(const block of arguments[0]) {
-    timeline.push(block);
-  }
   timeline.push(buildDebrief(debrief_text));
   jsPsych.init({
     timeline: timeline,
