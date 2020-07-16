@@ -2,16 +2,16 @@
 const correct_anskey = {'left':37, 'right':39}
 const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was wrong, try again!'}
 const block_para_lists = [{
-    instruction: "<p>Welcome to the task. The first 25 trials are just to get you used to the program and how it work. Focus on the cross that first appears at the center of the screen. Then wait for the key to appear, and respond with the correct arrow key</p>",
+    instruction: "<p>The first 25 trials are just to get you used to the program and how it works. Focus on the cross that first appears at the center of the screen. Then wait for the key to appear, and respond with the correct arrow key</p>",
     stim_csv: "wordlist_p1.csv",
-    debrief: "<p>blah blah blah</p>",
+    debrief: "<p>Trial run complete!</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
    },
    {
      instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
      stim_csv: "wordlist_p2.csv",
-     debrief: "<p>blah blah blah</p>",
+     debrief: "<p>All Done!</p>",
      feedback:true,
      preprocess:assignTrialCondandShuffle
   },
@@ -23,8 +23,7 @@ const fixation = {
   trial_duration: 500,
   post_trial_gap: 0
 }
-const instruction_text = '<p>Blah Blah Blah</p>'+
-    '<p>Blah Blah Blah Blah</p>';
+const instruction_text = '<p>Welcome to the reaction time task</p>';
 const debrief_text ="<p>blah blah blah DONE</p>";
 //Functions
 function assignTrialCondandShuffle(stim_list) {
@@ -51,7 +50,7 @@ function buildInstruction(text) {
     type: 'html-keyboard-response', 
     //please refine the instruction below, use <p> and </p> to surround every line"
     stimulus: text +
-      '<p>When you are ready to begin, press Y or N.</p>',
+      '<p>Please enter the passcode you created in the Survey.</p>',
     choices: ['y','n']
   }
 }
