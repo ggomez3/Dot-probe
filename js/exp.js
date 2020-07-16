@@ -148,12 +148,6 @@ const csv_path = "./csv/";
 let promises = [];
 var timeline = [];
 
-var trial_1 = {
-    type: 'html-keyboard-response',
-    stimulus: 'Please enter the passcode you created in the survey.',
-    choices: ['123456','111111', '654321', '456789', '987654']
-}
-
 timeline.push(trial_1);
 
 //main()
