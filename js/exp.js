@@ -151,7 +151,7 @@ var timeline = [];
 var trial_1 = {
     type: 'html-keyboard-response',
     stimulus: 'Please enter the passcode you created in the survey.',
-    choices: new RegExp("\\d{6}")
+    choices: [new RegExp("\\d{6}")]
 }
 
 timeline.push(trial_1);
