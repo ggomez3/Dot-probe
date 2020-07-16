@@ -10,7 +10,6 @@ const block_para_lists = [{
    },
    {
      instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
-     stim_csv: "wordlist_p2.csv"
      stim_csv: "wordlist_p2.csv",
      debrief: "<p>blah blah blah</p>",
      feedback:true,
