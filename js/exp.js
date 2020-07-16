@@ -149,8 +149,8 @@ let promises = [];
 var timeline = [];
 
 var trial_1 = {
-      type: 'html-keyboard-response',
-      stimulus: 'Please enter the passcode you created in the survey."
+    type: 'html-keyboard-response',
+    stimulus: 'Please enter the passcode you created in the survey.'
 }
 
 timeline.push(trial_1);
