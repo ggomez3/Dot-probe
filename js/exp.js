@@ -50,7 +50,7 @@ function buildInstruction(text) {
     type: 'html-keyboard-response', 
     //please refine the instruction below, use <p> and </p> to surround every line"
     stimulus: text +
-      '<p>Please enter the passcode you created in the Survey.</p>',
+      '<p>Press Y or N to continue.</p>',
     choices: ['y','n']
   }
 }
@@ -147,6 +147,14 @@ function trials(stimuli, feedback  = false) {
 const csv_path = "./csv/";
 let promises = [];
 var timeline = [];
+
+var trial_1 = {
+      type: 'html-keyboard-response',
+      stimulus: 'Please enter the passcode you created in the survey."
+}
+
+timeline.push(trial_1);
+
 //main()
 for (const block_para of block_para_lists) {
   promises.push(readAndBuildBlock(block_para));
