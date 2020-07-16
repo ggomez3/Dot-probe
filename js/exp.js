@@ -148,8 +148,6 @@ const csv_path = "./csv/";
 let promises = [];
 var timeline = [];
 
-timeline.push(trial_1);
-
 //main()
 for (const block_para of block_para_lists) {
   promises.push(readAndBuildBlock(block_para));
