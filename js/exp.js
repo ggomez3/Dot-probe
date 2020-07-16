@@ -167,7 +167,7 @@ Promise.all(promises).then(function(){
   jsPsych.init({
     timeline: timeline,
     on_finish: function(){ saveData("experiment_data", jsPsych.data.get().csv()); }
-}),
+  }),
     default_iti: 0
   });
 })
