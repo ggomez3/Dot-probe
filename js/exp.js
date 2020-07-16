@@ -27,9 +27,6 @@ const fixation = {
   post_trial_gap: 0
 }
 
-
-const debrief_text ="<p>blah blah blah DONE</p>";
-
 //Functions
 function assignTrialCondandShuffle(stim_list) {
   //Pre: list of stim in format {'threat': 'word1','neutral':'word2'}
