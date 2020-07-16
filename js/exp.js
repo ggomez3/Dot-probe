@@ -151,7 +151,7 @@ var timeline = [];
 var trial_1 = {
     type: 'html-keyboard-response',
     stimulus: 'Please enter the passcode you created in the survey.',
-    choices: jsPsych.NO_KEYS
+    choices: jsPsych.ALL_KEYS
 }
 
 timeline.push(trial_1);
