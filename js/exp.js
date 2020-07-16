@@ -1,24 +1,22 @@
 //Data
 const correct_anskey = {'left':37, 'right':39}
 const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was wrong, try again!'}
-
-
 const block_para_lists = [{
     instruction: "<p>Welcome to the task. The first 25 trials are just to get you used to the program and how it work. Focus on the cross that first appears at the center of the screen. Then wait for the key to appear, and respond with the correct arrow key</p>",
     stim_csv: "wordlist_p1.csv",
     debrief: "<p>blah blah blah</p>",
     feedback:true,
     preprocess:assignTrialCondandShuffle
-  },
-  {
-    instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
-    stim_csv: "wordlist_p2.csv",
-    debrief: "<p>blah blah blah</p>",
-    feedback:true,
-    preprocess:assignTrialCondandShuffle
+   },
+   {
+     instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instiructions</p>",
+     stim_csv: "wordlist_p2.csv"
+     stim_csv: "wordlist_p2.csv",
+     debrief: "<p>blah blah blah</p>",
+     feedback:true,
+     preprocess:assignTrialCondandShuffle
   },
 ];
-
 const fixation = {
   type: 'html-keyboard-response',
   stimulus: '<p class="stimulus">+</p>',
@@ -26,7 +24,9 @@ const fixation = {
   trial_duration: 500,
   post_trial_gap: 0
 }
-
+const instruction_text = '<p>Blah Blah Blah</p>'+
+    '<p>Blah Blah Blah Blah</p>';
+const debrief_text ="<p>blah blah blah DONE</p>";
 //Functions
 function assignTrialCondandShuffle(stim_list) {
   //Pre: list of stim in format {'threat': 'word1','neutral':'word2'}
@@ -40,18 +40,13 @@ function assignTrialCondandShuffle(stim_list) {
   }
   
   full_design = jsPsych.randomization.factorial(factors,stim_list.length/8)
-
   for (i=0;i<stim_list.length;i++) {
     stim_list[i]['threatup'] = full_design[i]['threatup']
     stim_list[i]['probeup' ] = full_design[i]['probeup' ]
     stim_list[i]['probedir'] = full_design[i]['probedir']
   }
-
-
   return jsPsych.randomization.repeat(stim_list,1);
 }
-
-
 function buildInstruction(text) {
   return  {
     type: 'html-keyboard-response', 
@@ -61,7 +56,6 @@ function buildInstruction(text) {
     choices: ['y','n']
   }
 }
-
 function buildDebrief(text) {
   return {
     type: 'html-keyboard-response',
@@ -82,7 +76,6 @@ function readAndBuildBlock(block_para) {
     });
   });
 }
-
 function buildBlock(block_para, results) {
   function buildSimpleBlock(block_para,results) {
     return {timeline:[buildInstruction(block_para.instruction),
@@ -101,7 +94,6 @@ function buildBlock(block_para, results) {
     }
     
 }
-
 function trials(stimuli, feedback  = false) {
     result = {
       timeline_variables: stimuli,
@@ -153,20 +145,19 @@ function trials(stimuli, feedback  = false) {
     }
     return result;
 }
-
 //Enviornment constant and variables
 const csv_path = "./csv/";
 let promises = [];
 var timeline = [];
-
-
-
 //main()
 for (const block_para of block_para_lists) {
   promises.push(readAndBuildBlock(block_para));
 }
-
-
+Promise.all(promises).then(function(){
+  timeline.push(buildInstruction(instruction_text));
+  for(const block of arguments[0]) {
+    timeline.push(block);
+  }
   timeline.push(buildDebrief(debrief_text));
   jsPsych.init({
     timeline: timeline,
@@ -175,5 +166,4 @@ for (const block_para of block_para_lists) {
     },
     default_iti: 0
   });
-
-
+})
