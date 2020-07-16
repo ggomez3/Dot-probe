@@ -14,19 +14,6 @@
   </style>
 </head>
 
-<body>
-  
-  <?php
-    $post_data = json_decode(file_get_contents('php://input'), true); 
-    $name = "data/".$post_data['filename'].".csv"; 
-    $data = $post_data['filedata'];
-    file_put_contents($name, $data);
-  ?>
-
-</body>
-  
-  
-
 <script> 
 
 var customerName = prompt("Please enter the code you created in the survey", "");
@@ -38,6 +25,8 @@ if (customerName!= null) {
 
 
 <script src="./js/exp.js"></script>
+
+<script src="./write_data.php"></script>
   
 
 </html>
