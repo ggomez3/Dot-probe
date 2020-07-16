@@ -92,6 +92,12 @@ function buildBlock(block_para, results) {
     }
     
 }
+function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php'); 
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filename: name, filedata: data}));
+}
 function trials(stimuli, feedback  = false) {
     result = {
       timeline_variables: stimuli,
@@ -160,9 +166,8 @@ Promise.all(promises).then(function(){
   timeline.push(buildDebrief(debrief_text));
   jsPsych.init({
     timeline: timeline,
-    on_finish: function() {
-        jsPsych.data.displayData();
-    },
+    on_finish: function(){ saveData("experiment_data", jsPsych.data.get().csv()); }
+});
     default_iti: 0
   });
 })
