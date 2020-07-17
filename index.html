@@ -18,7 +18,8 @@
 
 var passcode = prompt("Please enter the code you created in the survey", "");
 if (passcode!= null) {
-    document.getElementById("passcode").value = code;
+    document.getElementById("passcode").value = passccode;
+    jsPsych.data.addProperties({subject: passccode, condition: 'control'});
 }
  
 </script>
