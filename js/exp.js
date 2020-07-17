@@ -57,8 +57,8 @@ function buildInstruction(text) {
 function buildDebrief(text) {
   return {
     type: 'html-keyboard-response',
-    stimulus: "<p>blah blah blah DONE</p>" ,
-    prompt: "<p>press any key to take a look on the data</p>" 
+    stimulus: "<p> Done </p>" ,
+    prompt: "<p>press any key to continue</p>" 
   }
 }
 //Promisify
