@@ -3,7 +3,7 @@ const correct_anskey = {'left':37, 'right':39}
 const feedback_msg = {'Correct':'Correct, well done!','Wrong': 'Oops! That was wrong, try again!'}
 const block_para_lists = [{
     instruction: "<p>The first 25 trials are just to get you used to the program and how it works. Focus on the cross that first appears at the screen.</p>" 
-    + "<p>,An arrow key, < (left) or > (right), will appear on screen. Please press the correct arrow key</p>" 
+    + "<p>,An arrow key, < (left) or > (right), will appear on screen. Please press the correct arrow key</p>", 
     stim_csv: "wordlist_p1.csv",
     debrief: "<p>Trial run complete!</p>",
     feedback:true,
