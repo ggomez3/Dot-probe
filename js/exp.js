@@ -2,7 +2,7 @@
 const correct_anskey = {'left':37, 'right':39}
 const feedback_msg = {'Correct':'Correct','Wrong': 'Wrong key, try again!'}
 const block_para_lists = [{
-    instruction: "<p>The first 25 trials are just to get you used to the program and how it works. Focus on the cross that first appears at the screen.</p>" 
+    instruction: "<p>The first 25 trials are just to get you used to the program and how it works. Focus on the cross that first appears at the center of the screen.</p>" 
     + "<p>Shortly after, a key, '<' (left)  or  '>' (right),  will appear on screen.</p>"
     +"<p>Respond by pressing the arrow key on your keyboard that corresponds to the direction of the key on screen</p>", 
     stim_csv: "wordlist_p1.csv",
