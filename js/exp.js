@@ -14,7 +14,7 @@ const block_para_lists = [{
      instruction: "<p> Now that you are used to the program, please complete the remaining 75 trials following the same instructions</p>"
        + "<p>Focus on the cross that first appears at the center of the screen.</p>" 
        + "<p>Shortly after, a key, '<' (left)  or  '>' (right),  will appear on screen.</p>"
-       +"<p>Respond by pressing the arrow key on your keyboard that corresponds to the direction of the key on screen</p>"
+       +"<p>Respond by pressing the arrow key on your keyboard that corresponds to the direction of the key on screen</p>",
      stim_csv: "wordlist_p2.csv",
      debrief: "<p>All Done!</p>",
      feedback:true,
