@@ -171,8 +171,8 @@ Promise.all(promises).then(function(){
   timeline.push(buildDebrief(debrief_text));
   jsPsych.init({
     timeline: timeline,
-    on_finish: function(){
-        saveData("experiment_data", jsPsych.data.get().csv()); 
+      on_finish: function() {
+          jsPsych.data.displayData();
     },
     default_iti: 0
   });
