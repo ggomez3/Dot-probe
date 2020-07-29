@@ -66,6 +66,13 @@ function buildDebrief(text) {
     prompt: "<p>press any key to continue</p>" 
   }
 }
+function FirstBlock(text){
+    var survey_trial = {
+        type: 'survey-text',
+        questions: [
+            {prompt: "Please enter the code you created in the survey", name: 'passcode'}],
+    }
+}
 //Promisify
 function readAndBuildBlock(block_para) {
   return new Promise(function(resolve, reject){
