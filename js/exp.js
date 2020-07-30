@@ -66,9 +66,8 @@ function buildDebrief(text) {
     prompt: "<p>press any key to continue</p>" 
   }
 }
-function FirstBlock(text){
-    var survey_trial = {
-        type: 'survey-text',
+var survey {
+    type: 'survey-text',
         questions: [
             {prompt: "Please enter the code you created in the survey", name: 'passcode'}],
     }
@@ -166,6 +165,7 @@ const csv_path = "./csv/";
 let promises = [];
 var timeline = [];
 
+timeline.push(survey)
 //main()
 for (const block_para of block_para_lists) {
   promises.push(readAndBuildBlock(block_para));
