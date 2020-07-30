@@ -66,7 +66,7 @@ function buildDebrief(text) {
     prompt: "<p>press any key to continue</p>" 
   }
 }
-var survey {
+var = survey {
     type: 'survey-text',
         questions: [
             {prompt: "Please enter the code you created in the survey", name: 'passcode'}],
