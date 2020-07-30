@@ -69,9 +69,8 @@ function buildDebrief(text) {
 var survey = {
     type: 'survey-text',
         questions: [
-            {prompt: "Please enter the code you created in the survey", name: 'passcode'}],
-    }
-}
+            {prompt: "Please enter the code you created in the survey", name: 'passcode'}]
+};
 //Promisify
 function readAndBuildBlock(block_para) {
   return new Promise(function(resolve, reject){
